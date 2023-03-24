@@ -70,7 +70,7 @@ let sliderImage = new Swiper(`.swiper`, {
 /*          eventsTarget: ".image-slider",
  */      }, 
     autoHeight: false, // слайдер подстраивается под высоту контента
-    slidesPerView: 2, /// количество слайдом на показ
+    slidesPerView: 3, /// количество слайдом на показ
     watchOverflow: true, //если слайдов меньше чем указано slidesPerView откличает слайдер
     spaceBetween: 20, //Пространство между слайдами
     slidesPerGroup: 1, // количество пролистываемых слайдов
@@ -122,15 +122,6 @@ let sliderImage = new Swiper(`.swiper`, {
 
 });
 
-
-
-
-
-
-
-
-
-
 let swiper2 = new Swiper(`.image-in-slider`, {
     grabCursor: true,
     pagination: {
@@ -144,17 +135,10 @@ let swiper2 = new Swiper(`.image-in-slider`, {
 
 
 
-
-
-
-
-
-
-
-
 const textSlider = new Swiper(`.text-slider`,{
-slidesPerView:3,
+slidesPerView:1,
 spaceBetween:20,
+effect: `slide`,
 speed:800,
 breakpoints: {///адаптив
     280: {
@@ -167,12 +151,12 @@ breakpoints: {///адаптив
         slidesPerView: 3,
     },
 },
+slideToClickedSlide: false,
+
 initialSlide: 1,
 loop:true,
-mousewheel: { //прокрутка колесом мыши
-    sensitivity: 1,
-/*          eventsTarget: ".image-slider",
-*/      },
+loopedSlides: 3,
+freeMode: false,
 });
 
 
