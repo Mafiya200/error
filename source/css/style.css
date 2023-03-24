@@ -96,6 +96,7 @@ html {
 
 .wrapper {
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .title {
@@ -115,26 +116,31 @@ html {
   overflow: hidden;
 }
 
+.image-slider__slide {
+  text-align: center;
+}
+
 .swiper-slide.image-slider__slide {
   /* width: auto; */
 }
 
 .image-slider__image {
+  /* max-width: 100%;
+      position: relative;
+  padding-bottom:62.56%; */
   position: relative;
-  width: 100%;
-  padding-bottom: 55%;
+  min-height: 70px;
 }
 
 .image-slider__image img {
-  max-width: 100%;
-  position: absolute;
-  top: 0%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  left: 50%;
+  /* max-width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover; */
+  max-width: 100%;
 }
 
 .swiper-button-prev {
@@ -145,8 +151,8 @@ html {
   font-size: 0px;
 }
 
-.image-slider.swiper-button-prev::after,
-.image-slider.swiper-button-next::after {
+.image-slider .swiper-button-prev::after,
+.image-slider .swiper-button-next::after {
   color: white;
   font-size: 80px;
 }
@@ -188,20 +194,20 @@ html {
 }
 
 .block {
-  min-height: 100vh;
+  min-height: 5vh;
   background-color: blanchedalmond;
 }
 
-.image-in-slider {
-  height: 450px;
-}
-
-.image-in-slider__slide {
-  height: 450px;
+.image-in-slider__image {
+  max-width: 100%;
+  height: 100%;
 }
 
 .image-in-slider__image img {
   max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .image-in-slider .swiper-pagination-bullet {
@@ -214,22 +220,12 @@ html {
   background-color: transparent;
 }
 
-.image-slider-prev {
-  background-color: cornflowerblue;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  font-size: 0px;
+.text-slider.swiper-container {
+  padding: 0 20px;
 }
 
-.image-slider-next {
-  width: 50px;
-  top: 50%;
-  right: 0;
-  height: 50px;
-  position: absolute;
-  background-color: red;
-  font-size: 0px;
+.text-slider__slide {
+  font-size: 25px;
+  line-height: 150%;
+  color: #fff;
 }

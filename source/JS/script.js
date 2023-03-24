@@ -26,11 +26,11 @@ const isMobile = {
     }
 };
 
-new Swiper(`.swiper`, {
+let sliderImage = new Swiper(`.swiper`, {
     // стрелки
     navigation: {
-        nextEl: `.image-slider-next`,
-        prevEl: `.image-slider-prev`,
+        nextEl: `.image-slider-next.swiper-button-next`,
+        prevEl: `.image-slider-prev.swiper-button-prev`,
     },
     /*  pagination: {
          el: `.swiper-pagination`,
@@ -65,14 +65,14 @@ new Swiper(`.swiper`, {
         onlyInViewport: true,
         pageUpDown: true,
     },
-   /*  mousewheel: { прокрутка колесом мыши
+     mousewheel: { //прокрутка колесом мыши
         sensitivity: 1,
-         eventsTarget: ".image-slider",
-     }, */
+/*          eventsTarget: ".image-slider",
+ */      }, 
     autoHeight: false, // слайдер подстраивается под высоту контента
-    slidesPerView: 3, /// количество слайдом на показ
+    slidesPerView: 2, /// количество слайдом на показ
     watchOverflow: true, //если слайдов меньше чем указано slidesPerView откличает слайдер
-    spaceBetween: 5, //Пространство между слайдами
+    spaceBetween: 20, //Пространство между слайдами
     slidesPerGroup: 1, // количество пролистываемых слайдов
     /* centeredSlides:true, */ // делает слайд по центру
     initialSlide: 1, // стартовый слайд
@@ -80,7 +80,7 @@ new Swiper(`.swiper`, {
         rows: 1,
     }, *///мультирядность
     loop: true,// бесконечность
-    loopedSlides: 0, //кол-во дублирующих слайдов нужно методом тыка вручную узнать нужное значение
+    loopedSlides: 3, //кол-во дублирующих слайдов нужно методом тыка вручную узнать нужное значение
     freeMode: false, //включает режим прокрутки без фиксация
 
     /* autoplay:{
@@ -122,12 +122,60 @@ new Swiper(`.swiper`, {
 
 });
 
- new Swiper(`.image-in-slider`, {
+
+
+
+
+
+
+
+
+
+let swiper2 = new Swiper(`.image-in-slider`, {
     grabCursor: true,
     pagination: {
         el: `.swiper-pagination`,
         clickable: true,
     },
     spaceBetween:1,
+    navigator:true,
     nested:true, // корректная работа перетаскивания\свайпа для дочернего элемента
 });
+
+
+
+
+
+
+
+
+
+
+
+const textSlider = new Swiper(`.text-slider`,{
+slidesPerView:3,
+spaceBetween:20,
+speed:800,
+breakpoints: {///адаптив
+    280: {
+        slidesPerView: 1,
+    },
+    480: {
+        slidesPerView: 2,
+    },
+    992: {
+        slidesPerView: 3,
+    },
+},
+initialSlide: 1,
+loop:true,
+mousewheel: { //прокрутка колесом мыши
+    sensitivity: 1,
+/*          eventsTarget: ".image-slider",
+*/      },
+});
+
+
+
+sliderImage.controller.control = textSlider;
+textSlider.controller.control = sliderImage;
