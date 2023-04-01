@@ -4,6 +4,7 @@
  
 
 
+
 ///Сделай функцию, которая принимает массив любых целых чисел,
 /// которая возращает новый массив, где все элементы кратны пяти. ([1,2,5,12,15,21] вернет [5,15])
 const isMobile = {
@@ -34,18 +35,39 @@ const isMobile = {
 
 
 
+
+
+
+if(!document.querySelector(`body`).matches(`._touch`)){
+
+function bodyCheck() {
+    if(isMobile.any() && window.innerWidth > 768){
+        $(`body`).removeClass(`_pc`);
+        $(`body`).addClass(`_touch`);
+    }
+    else if(window.innerWidth <= 768){
+        $(`body`).removeClass(`_pc`);
+        $(`body`).addClass(`_touch`);
+    }
+    else{
+        $(`body`).removeClass(`_touch`);
+        $(`body`).addClass(`_pc`);
+    }      
+}
+
+bodyCheck();
+    $(window).resize(bodyCheck);
+}
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
 
 
 
 });
 
-if(isMobile.any()){
-    $(`body`).addClass(`_touch`);
-}
-else{
-    $(`body`).addClass(`_pc`);
-}
+
 
 
 const evenImages= document.querySelectorAll(`.block-fruit_even .block-fruit__image`);
@@ -116,7 +138,6 @@ let arrowItems = document.querySelectorAll(`.arrow`);
 
 
 if($(window).width() < 768){
-    console.log($(window).width());
 
     $(`.arrow`).off(`click`);
 

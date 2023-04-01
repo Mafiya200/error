@@ -56,7 +56,7 @@ html {
 
 .wrapper {
     min-height: 100vh;
-width: 100%;
+    overflow: hidden;
 }
 
 
@@ -150,6 +150,7 @@ width: 100%;
     position      : relative;
     text-align    : center;
     text-transform: uppercase;
+
 }
 
 
@@ -207,11 +208,15 @@ width: 100%;
 
 @media (max-width:768px) {
     .menu__list {
-        width           : 40%;
+        width           : 30%;
         background-color: #333;
     }
 }
-
+@media (max-width:320px) {
+    .menu__list {
+        width           : 35%;
+    }
+}
 @media (min-width:768px) {
     .menu__list {
         display        : flex;
@@ -224,6 +229,11 @@ width: 100%;
     margin-left: 50px;
     padding    : 10px 0;
     align-items: center;
+}
+@media (max-width:768px){
+    .menu__list > li{
+        background-color: #333;
+    }
 }
 
 body._touch .menu__list>li {
@@ -451,7 +461,7 @@ right: 10px;
 }
 @media (max-width:320px) {
     .arrow {
-        margin-top : 0.1vh;
+        margin-top : 0.15vh;
         position: absolute;
 width: 0;
 height: 0;
