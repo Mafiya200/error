@@ -129,7 +129,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #3eb489;
+  background-color: #305daf;
 }
 
 @media (min-width: 768px) {
@@ -211,6 +211,9 @@ html {
   left: 0%;
   top: 100%;
   opacity: 1;
+}
+
+._pc .menu__sub-list {
   pointer-events: none;
 }
 
@@ -629,6 +632,14 @@ body._touch .arrow {
             flex: 0 0 40%;
   }
 }
+.block-fruit__title {
+  line-height: 1.5;
+}
+
+.block-fruit__text {
+  line-height: 1.5;
+}
+
 .block-fruit__image {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -741,6 +752,7 @@ body._touch .arrow {
 .popup-link {
   color: aliceblue;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .popup-block {
