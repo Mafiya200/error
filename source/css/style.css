@@ -129,7 +129,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: orange;
+  background-color: #1a8b2d;
 }
 
 @media (min-width: 768px) {
@@ -368,7 +368,8 @@ body._pc .menu__list > li:hover .menu__sub-list {
 
 .menu__link {
   display: inline-block;
-  color: aliceblue;
+  color: white;
+  font-weight: 600;
 }
 @media (max-width: 47.9375em) {
   .menu__link {
@@ -549,7 +550,7 @@ body._touch .arrow {
   z-index: 10;
   width: 100vw;
   height: 100vh;
-  background-color: hsla(348deg, 88%, 14%, 0.753);
+  background-color: rgba(67, 4, 17, 0.753);
 }
 
 .bg_fon._active {
@@ -681,15 +682,15 @@ body._touch .arrow {
 
   .block-fruit__image {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc((100vw - 40px) * 0.6 + 20px);
-            flex: 0 0 calc((100vw - 40px) * 0.6 + 20px);
+        -ms-flex: 0 0 calc(((100vw - 40px) * 0.6) + 20px);
+            flex: 0 0 calc(((100vw - 40px) * 0.6) + 20px);
   }
 }
 @media (min-width: 1240px) {
   .block-fruit__image {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(50vw + 120px);
-            flex: 0 0 calc(50vw + 120px);
+        -ms-flex: 0 0 calc(50vw - (0.4 - 0.5) * 1200px);
+            flex: 0 0 calc(50vw - (0.4 - 0.5) * 1200px);
   }
 }
 .block-fruit__image img {
@@ -705,8 +706,8 @@ body._touch .arrow {
   -webkit-transform: translate(0);
           transform: translate(0);
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc(50vw - 120px);
-          flex: 0 0 calc(50vw - 120px);
+      -ms-flex: 0 0 calc(50vw - (0.6 - 0.5) * 1200px);
+          flex: 0 0 calc(50vw - (0.6 - 0.5) * 1200px);
 }
 
 .block-fruit_even .block-fruit__image {
@@ -738,15 +739,15 @@ body._touch .arrow {
 @media (min-width: 768px) {
   .block-fruit_even .block-fruit__image {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc((100vw - 40px) * 0.4 + 20px);
-            flex: 0 0 calc((100vw - 40px) * 0.4 + 20px);
+        -ms-flex: 0 0 calc(((100vw - 40px) * 0.4) + 20px);
+            flex: 0 0 calc(((100vw - 40px) * 0.4) + 20px);
   }
 }
 @media (min-width: 1240px) {
   .block-fruit_even .block-fruit__image {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(50vw - 120px);
-            flex: 0 0 calc(50vw - 120px);
+        -ms-flex: 0 0 calc(50vw - (0.6 - 0.5) * 1200px);
+            flex: 0 0 calc(50vw - (0.6 - 0.5) * 1200px);
   }
 }
 .popup-link {
@@ -756,7 +757,7 @@ body._touch .arrow {
 }
 
 .popup-block {
-  background-color: hsla(208deg, 100%, 97%, 0.712);
+  background-color: rgba(240, 248, 255, 0.712);
   position: fixed;
   width: 100%;
   z-index: 100;
